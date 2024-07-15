@@ -149,7 +149,7 @@ def main() -> None:
                 message_container.chat_message("user", avatar="😎").markdown(prompt)
 
                 with message_container.chat_message("assistant", avatar="🤖"):
-                    with st.spinner(":green[Processing...]"):
+                    with st.spinner(":green[Đang tìm câu trả lời...]"):
                         if st.session_state["vector_db"] is not None:
                             response = process_question(
                                 prompt, st.session_state["vector_db"], selected_model
